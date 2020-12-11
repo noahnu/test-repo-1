@@ -1,0 +1,13 @@
+name: Example CI
+
+on: [pull_request_target]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Echo!
+        run: cat ./README.md
+
